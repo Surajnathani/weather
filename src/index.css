@@ -61,3 +61,12 @@ body {
         font-size: 12px;
     }
 }
+
+@media screen and (max-width: 330px) {
+
+    p,
+    select,
+    option {
+        font-size: 11px;
+    }
+}

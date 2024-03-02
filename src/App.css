@@ -74,12 +74,16 @@ option {
     font-size: inherit;
     font-family: inherit;
     color: inherit;
-    width: 10rem;
+    /* width: 10rem; */
     padding: 10px;
     border-radius: 0.25em;
     cursor: pointer;
     background: inherit;
     border: 1px solid #d0d0d0;
+}
+
+.select-option {
+    width: 100%;
 }
 
 select::-ms-expand {
@@ -131,6 +135,10 @@ option {
     justify-content: space-around;
 }
 
+.currentLocation {
+    font-size: 30px !important;
+}
+
 .location {
     display: flex;
     align-items: center;
@@ -170,5 +178,21 @@ option {
     .weatherCondition {
         width: 25px;
         height: 25px;
+    }
+
+    .mainContainer {
+        padding-top: 20px !important;
+        padding: 10px;
+    }
+
+    .foreCast {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .mainContainer {
+        padding-top: 20px !important;
+        padding: 5px;
     }
 }

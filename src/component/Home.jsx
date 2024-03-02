@@ -125,23 +125,19 @@ const Home = () => {
                 <div className='homeContainer'>
                     <input type="text" value={searchCity} onChange={handleSearchCity} className='search' placeholder='search by city name' />
                     <div className='selectOption'>
-                        <div>
-                            <select id="country" value={selectedCountry} onChange={handleCountryChange} className='select-option'>
-                                <option value="">Country...</option>
-                                {countries.map((country, index) => (
-                                    <option key={index} value={country.country}>{country.country.substring(0, 30)}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <div>
-                            <select id="city" value={selectedCity} onChange={handleCityChange}>
-                                <option value="">City...</option>
-                                {cities.map((city, index) => (
-                                    <option key={index} value={city}>{city.substring(0, 15)}</option>
-                                ))}
-                            </select>
-                        </div>
-                        <FaLocationDot className='icon location' onClick={getCoordinates} />
+                        <select id="country" value={selectedCountry} onChange={handleCountryChange} className='select-option'>
+                            <option value="">Country...</option>
+                            {countries.map((country, index) => (
+                                <option key={index} value={country.country}>{country.country.substring(0, 30)}</option>
+                            ))}
+                        </select>
+                        <select id="city" value={selectedCity} onChange={handleCityChange} className='select-option'>
+                            <option value="">City...</option>
+                            {cities.map((city, index) => (
+                                <option key={index} value={city}>{city.substring(0, 15)}</option>
+                            ))}
+                        </select>
+                        <FaLocationDot className='icon currentLocation' onClick={getCoordinates} />
                     </div>
                     {
                         currentTime && selectedData ?
